@@ -18,6 +18,7 @@ return new class extends Migration
             // Your fields...
             $table->string('repository_path');
             $table->string('entity_path');
+            $table->boolean('status')->default(1);
             // Audit fields
             $table->timestamps();
             $table->auditStamps();

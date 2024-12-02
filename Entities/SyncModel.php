@@ -24,5 +24,5 @@ class SyncModel extends CrudModel
     'deleted' => []
   ];
   public $translatedAttributes = [];
-  protected $fillable = ['repository_path', 'entity_path'];
+  protected $fillable = ['repository_path', 'entity_path', 'status'];
 }

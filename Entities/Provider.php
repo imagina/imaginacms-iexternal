@@ -2,13 +2,10 @@
 
 namespace Modules\Iexternal\Entities;
 
-use Astrotomic\Translatable\Translatable;
 use Modules\Core\Icrud\Entities\CrudModel;
 
 class Provider extends CrudModel
 {
-  use Translatable;
-
   protected $table = 'iexternal__providers';
   public $transformer = 'Modules\Iexternal\Transformers\ProviderTransformer';
   public $repository = 'Modules\Iexternal\Repositories\ProviderRepository';
@@ -26,8 +23,8 @@ class Provider extends CrudModel
     'deleting' => [],
     'deleted' => []
   ];
-  public $translatedAttributes = ['title', 'description'];
-  protected $fillable = ['keys', 'options'];
+  public $translatedAttributes = [];
+  protected $fillable = ['title', 'description', 'keys', 'options', 'status'];
 
   protected $casts = [
     'options' => 'array',

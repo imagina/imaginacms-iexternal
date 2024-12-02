@@ -16,8 +16,11 @@ return new class extends Migration
             $table->engine = 'InnoDB';
             $table->increments('id');
             // Your fields...
+            $table->string('title');
+            $table->string('description')->nullable();
             $table->longText('options')->nullable();
             $table->longText('keys')->nullable();
+            $table->boolean('status')->default(1);
             // Audit fields
             $table->timestamps();
             $table->auditStamps();
