@@ -24,7 +24,7 @@ class Provider extends CrudModel
     'deleted' => []
   ];
   public $translatedAttributes = [];
-  protected $fillable = ['title', 'description', 'keys', 'options', 'status'];
+  protected $fillable = ['title', 'description', 'system_name', 'keys', 'options', 'status'];
 
   protected $casts = [
     'options' => 'array',
