@@ -24,6 +24,7 @@ return [
         'edit' => 'iexternal::syncmodels.edit resource',
         'destroy' => 'iexternal::syncmodels.destroy resource',
         'restore' => 'iexternal::syncmodels.restore resource',
+        'sync' => 'iexternal::syncmodels.sync resource',
     ],
 // append
 
