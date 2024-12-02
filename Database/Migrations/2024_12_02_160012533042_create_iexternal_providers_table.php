@@ -17,6 +17,7 @@ return new class extends Migration
             $table->increments('id');
             // Your fields...
             $table->string('title');
+            $table->string('system_name')->unique();
             $table->string('description')->nullable();
             $table->longText('options')->nullable();
             $table->longText('keys')->nullable();
