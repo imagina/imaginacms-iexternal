@@ -1,0 +1,14 @@
+{
+    "name": "Iexternal",
+    "alias": "iexternal",
+    "version": "1.0.0",
+	"description": "",
+    "keywords": [],
+    "priority": 1,
+    "providers": [
+        "Modules\\Iexternal\\Providers\\IexternalServiceProvider",
+        "Modules\\Iexternal\\Providers\\EventServiceProvider",
+        "Modules\\Iexternal\\Providers\\RouteServiceProvider"
+    ],
+    "files": []
+}
