@@ -44,7 +44,7 @@ $router->group(['prefix' => '/iexternal/v1'], function (Router $router) {
         'method' => 'post', // get,post,put....
         'path' => '/update-create/{model}', // Route Path
         'uses' => 'syncModel', //Name of the controller method to use
-        'middleware' => ['auth-can:iexternal.syncmodels.sync'] // if not set up middleware, auth:api will be the default
+        'middleware' => ['auth:api','auth-can:iexternal.syncmodels.sync'] // if not set up middleware, auth:api will be the default
       ]
     ]
   ]);
