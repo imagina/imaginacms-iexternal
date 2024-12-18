@@ -58,7 +58,8 @@ class SyncModelApiController extends BaseCrudController
       //Update or create model and sync external
       $syncModelRepository = app($syncModel->repository_path);
       if ($external) {
-        $response = $syncModelRepository->updateBy($external->entity_id, $attributes['data']);
+        if(isset($attributes['data']['password'])) unset($attributes['data']['password']);
+        $response = $syncModelRepository->updateBy($external->entity_id, $attributes['data'], ['sync' => true]);
       } else {
         $response = $syncModelRepository->create($attributes['data']);
         $externalRepository->create([
