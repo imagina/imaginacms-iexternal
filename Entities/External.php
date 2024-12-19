@@ -24,7 +24,8 @@ class External extends CrudModel
     'deleted' => []
   ];
   public $translatedAttributes = [];
-  protected $fillable = ['entity_type', 'entity_id', 'provider_id', 'external_id'];
+  protected $fillable = ['entity_type', 'entity_id', 'provider_id', 'external_id', 'options'];
+  protected $casts = ['options' => 'array'];
 
   public function provider()
   {

@@ -19,6 +19,7 @@ return new class extends Migration {
       $table->integer('entity_id')->unsigned()->nullable();
       $table->integer('provider_id')->unsigned();
       $table->string('external_id');
+      $table->text('options')->nullable();
       $table->foreign('provider_id')->references('id')->on('iexternal__providers')->onDelete('cascade');
       // Audit fields
       $table->timestamps();
